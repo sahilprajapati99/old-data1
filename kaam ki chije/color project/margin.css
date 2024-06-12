@@ -1,0 +1,130 @@
+body { font-family: "Gotham", Futura, Arial, sans-serif; }
+
+span {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.box-model {
+  width: 340px;
+  height: 340px;
+  font-size: 13px;
+  margin: 20px auto;
+  font-weight: bold;
+  line-height: 15px;
+  position: relative;
+  text-align: center;
+}
+
+.box-model * {
+  cursor: default;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.box-model > div { position: absolute; }
+
+.side {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  text-align: center;
+  position: absolute;
+  transition: all .3s;
+}
+
+.side.info {
+  opacity: 0;
+  height: 100%;
+  display: table;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 0 0 5px 0 #878787;
+}
+
+.side.info p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 25px;
+}
+
+.box-model > div:hover > .side { transition: all .5s .5s; }
+.box-model > div:hover > .side.info { z-index: 9; opacity: 1; }
+
+.box-margin {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: lightGreen;
+  border: 1px dashed lightGrey;
+  box-shadow: 0 0 20px 1px grey;
+}
+
+.box-margin span { top: 5px; color: black; }
+
+.box-border {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 25px;
+  background: #FFE1B5;
+  border: 25px solid #A7A7A7;
+}
+
+.box-border span { top: -20px; color: white; }
+
+.box-padding {
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+}
+
+.box-padding span { color: black; top: 5px; }
+
+.content {
+  top: 75px;
+  left: 75px;
+  right: 75px;
+  bottom: 75px;
+  border-radius: 2px;
+  background-color: #BBD1FF;
+  background-size: 16px 16px;
+  box-shadow: 0 0 3px 0 #878787 inset;
+  animation: slide 1s linear infinite;
+  background-image: linear-gradient(45deg,
+    rgba(255, 255, 255, .2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, .2) 50%,
+    rgba(255, 255, 255, .2) 75%,
+    transparent 75%,
+    transparent);
+}
+
+@keyframes slide {
+  from { background-position: 0px; }
+  to { background-position: 16px; }
+}
+
+.king {
+  padding: 3px;
+  margin: 82px 52px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 5px 1px rgba(255, 255, 255, .7);
+}
+
+
+/* please leave this portion, OR do something ridiculous to it! */
+.silly-rules { clear: both; text-align: center; }
